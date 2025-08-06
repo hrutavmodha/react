@@ -1,10 +1,10 @@
 export default function render(
-    element: () => HTMLElement,
+    element: HTMLElement,
     parent?: HTMLElement
 ): void {
-    console.log('Received element:', element)
+    console.log(element)
     if (parent)
-        parent.appendChild(element())
+        parent.appendChild(element)
     else
-        document.body.appendChild(element())
+        document.body.appendChild(element)
 }

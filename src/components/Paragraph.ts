@@ -2,7 +2,7 @@ export default function Paragraph({
     children,
     ...props
 }: {
-    children: string | number;
+    children: string | number
     [key: string]: any
 }) {
     const paragraph = document.createElement('p')

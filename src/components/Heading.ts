@@ -3,8 +3,8 @@ export default function Heading({
     children,
     ...props
 }: {
-    level: number;
-    children: string | number;
+    level: number
+    children: string | number
     [key: string]: any
 }): HTMLHeadingElement {
     const heading = document.createElement(`h${level}`) as HTMLHeadingElement
