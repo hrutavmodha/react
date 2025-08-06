@@ -2,12 +2,12 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 export default defineConfig({
     esbuild: {
-        jsxImportSource: 'src',
+        jsxImportSource: 'jsx',
         jsxDev: false
     },
     resolve: {
         alias: {
-            'src': resolve(__dirname, 'src', 'utils')
+            'jsx': resolve(__dirname, 'src', 'jsx')
         }
     }
 })

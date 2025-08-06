@@ -13,7 +13,7 @@
         "moduleResolution": "bundler",
         "baseUrl": ".",
         "jsx": "react-jsx",
-        "jsxImportSource": "src/utils",
+        "jsxImportSource": "src/jsx",
         "allowImportingTsExtensions": true,
         "verbatimModuleSyntax": true,
         "moduleDetection": "force",
