@@ -6,15 +6,17 @@ export default function Link({
     href: string
     children: string | number
     [key: string]: any
-}) {
+}): HTMLAnchorElement {
     const link = document.createElement('a')
     link.href = href
     link.textContent = String(children)
     for (let key in props) {
-        if (key.startsWith('on'))
+        if (key.startsWith('on')) {
             link.addEventListener(key, props[key])
-        else
+        }
+        else {
             link.setAttribute(key, props[key])
+        }
     }
     return link
 }

@@ -4,14 +4,16 @@ export default function Button({
 }: {
     children: string | number
     [key: string]: any
-}) {
+}): HTMLButtonElement {
     const button = document.createElement('button')
     button.textContent = String(children)
     for (let key in props) {
-        if (key.startsWith('on'))
+        if (key.startsWith('on')) {
             button.addEventListener(key.substring(2), props[key])
-        else
+        }
+        else {
             button.setAttribute(key, props[key])
+        }
     }
     return button
 }

@@ -10,10 +10,12 @@ export default function Heading({
     const heading = document.createElement(`h${level}`) as HTMLHeadingElement
     heading.textContent = String(children)
     for (let key in props) {
-        if (key.startsWith('on'))
+        if (key.startsWith('on')) {
             heading.addEventListener(key.substring(2), props[key])
-        else
+        }
+        else {
             heading.setAttribute(key, props[key])
+        }
     }
     return heading
 }

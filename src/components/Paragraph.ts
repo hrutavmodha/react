@@ -4,14 +4,16 @@ export default function Paragraph({
 }: {
     children: string | number
     [key: string]: any
-}) {
+}): HTMLParagraphElement {
     const paragraph = document.createElement('p')
     paragraph.textContent = String(children)
     for (let key in props) {
-        if (key.startsWith('on'))
+        if (key.startsWith('on')) {
             paragraph.addEventListener(key.substring(2), props[key])
-        else
+        }
+        else {
             paragraph.setAttribute(key, props[key])
+        }
     }
     return paragraph
 }
