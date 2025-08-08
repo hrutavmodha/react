@@ -2,9 +2,12 @@ export default function render(
     element: HTMLElement,
     parent?: HTMLElement
 ): void {
-    console.log(element)
-    if (parent)
+    if (parent) {
+        parent.innerHTML = ''
         parent.appendChild(element)
-    else
+    }
+    else {
+        document.body.innerHTML = ''
         document.body.appendChild(element)
+    }
 }

@@ -2,7 +2,6 @@ let routes: { [key: string]: () => HTMLElement } = {}
 export function setRoutes(
     newRoutes: typeof routes
 ): void {
-    console.log('Received routes:\n', newRoutes)
     routes = newRoutes
 }
 export function navigate(
