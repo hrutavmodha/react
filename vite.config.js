@@ -3,11 +3,11 @@ import { resolve } from 'path'
 export default defineConfig({
     esbuild: {
         jsxImportSource: 'jsx',
-        jsxDev: false
+        jsxDev: false,
     },
     resolve: {
         alias: {
-            'jsx': resolve(__dirname, 'src', 'jsx')
-        }
-    }
+            jsx: resolve(__dirname, 'src', 'jsx'),
+        },
+    },
 })
