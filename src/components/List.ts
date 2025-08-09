@@ -26,5 +26,6 @@ export default function List({
             list.setAttribute(key, props[key])
         }
     }
+    list.style += 'margin: 30px;'
     return list
 }

@@ -47,4 +47,4 @@ npm run dev
 
 3. Start wrangling
 
-- If you''ve followed all the steps correctly till here, you will see the App.tsx function's content being rendered on the screen
+- If you've followed all the steps correctly till here, you will see the App.tsx function's content being rendered on the screen
