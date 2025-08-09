@@ -1,7 +1,7 @@
 export default function Script({
-    children
+    children,
 }: {
-    children: Function
+    children: () => any
 }): HTMLScriptElement {
     const js = document.createElement('script')
     js.textContent = `(${children.toString()})();`

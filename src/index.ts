@@ -8,5 +8,5 @@ render(App(), root)
 setRoutes({
     '/': App,
     '/home': Home,
-    '/about': About
+    '/about': About,
 })

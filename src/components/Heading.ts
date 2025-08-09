@@ -9,11 +9,10 @@ export default function Heading({
 }): HTMLHeadingElement {
     const heading = document.createElement(`h${level}`) as HTMLHeadingElement
     heading.textContent = String(children)
-    for (let key in props) {
+    for (const key in props) {
         if (key.startsWith('on')) {
             heading.addEventListener(key.substring(2), props[key])
-        }
-        else {
+        } else {
             heading.setAttribute(key, props[key])
         }
     }

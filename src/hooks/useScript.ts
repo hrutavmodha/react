@@ -7,7 +7,7 @@ export default function useScript({
 }): HTMLScriptElement {
     const js = document.createElement('script')
     js.src = src
-    for (let key in props) {
+    for (const key in props) {
         js.setAttribute(key, props[key])
     }
     return js

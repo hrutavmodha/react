@@ -8,4 +8,4 @@ export default function About() {
             <Paragraph>This is about</Paragraph>
         </Division>
     )
-} 
+}

@@ -7,11 +7,10 @@ export default function Paragraph({
 }): HTMLParagraphElement {
     const paragraph = document.createElement('p')
     paragraph.textContent = String(children)
-    for (let key in props) {
+    for (const key in props) {
         if (key.startsWith('on')) {
             paragraph.addEventListener(key.substring(2), props[key])
-        }
-        else {
+        } else {
             paragraph.setAttribute(key, props[key])
         }
     }

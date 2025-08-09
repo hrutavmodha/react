@@ -1,12 +1,11 @@
 export default function render(
     element: HTMLElement,
-    parent?: HTMLElement
+    parent?: HTMLElement,
 ): void {
     if (parent !== undefined) {
         parent.innerHTML = ''
         parent.appendChild(element)
-    }
-    else {
+    } else {
         document.body.innerHTML = ''
         document.body.appendChild(element)
     }

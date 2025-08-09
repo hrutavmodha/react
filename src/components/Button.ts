@@ -7,11 +7,10 @@ export default function Button({
 }): HTMLButtonElement {
     const button = document.createElement('button')
     button.textContent = String(children)
-    for (let key in props) {
+    for (const key in props) {
         if (key.startsWith('on')) {
             button.addEventListener(key.substring(2), props[key])
-        }
-        else {
+        } else {
             button.setAttribute(key, props[key])
         }
     }

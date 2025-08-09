@@ -4,7 +4,7 @@ import Paragraph from '../components/Paragraph'
 import About from './About'
 export default function Home() {
     return (
-        <Division id='myDiv'>
+        <Division id="myDiv">
             <Heading level={1}>Hello World</Heading>
             <Paragraph>This is a paragraph</Paragraph>
             <About />

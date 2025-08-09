@@ -8,7 +8,7 @@
 
 1. Direct DOM manipulation: meant for simplicity
 
-2. Functional JSX components support: *Inspired from **React**'s component-based architecture*
+2. Functional JSX components support: _Inspired from **React**'s component-based architecture_
 
 3. Client-side Routing support - Via history API
 
@@ -18,17 +18,17 @@
 
 ## Quick Start
 
-1. Configure JSX support for the project 
+1. Configure JSX support for the project
 
 > You may skip this step if you want to use the kit by calling the raw functions defined, but it is recommended step
 
 - After cloning the repository and moving into the project's root directory, follow the below steps:
 
-- Open `tsconfig.json` file (located at the root of the project) 
+- Open `tsconfig.json` file (located at the root of the project)
 
 - Add the below lines if not present already, and if it's there, make sure that those are as follows:
 
-``` JSON
+```JSON
 {
     "compilerOptions": {
         "jsx": "react-jsx",
@@ -41,7 +41,7 @@
 
 - Run the development server by running the following command in your terminal:
 
-``` Bash
+```Bash
 npm run dev
 ```
 

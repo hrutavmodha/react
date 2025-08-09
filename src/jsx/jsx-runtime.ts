@@ -1,7 +1,4 @@
-export function jsx(
-    type: any,
-    props: any
-): HTMLElement {
+export function jsx(type: any, props: any): HTMLElement {
     return type({ ...props })
 }
 

@@ -1,19 +1,14 @@
 let routes: { [key: string]: () => HTMLElement } = {}
-export function setRoutes(
-    newRoutes: typeof routes
-): void {
+export function setRoutes(newRoutes: typeof routes): void {
     routes = newRoutes
 }
-export function navigate(
-    path: string
-): void {
+export function navigate(path: string): void {
     window.history.pushState({}, '', path)
     renderRoute()
 }
-function renderRoute(
-): void {
+function renderRoute(): void {
     console.log('RenderRoute called')
-    let root = document.getElementById('root') as HTMLDivElement
+    const root = document.getElementById('root') as HTMLDivElement
     const path = window.location.pathname
     const view = routes[path]
     console.log('Function to be parsed: ', view)

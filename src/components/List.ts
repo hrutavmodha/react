@@ -6,23 +6,20 @@ export default function List({
     ordered: boolean
     children: Array<HTMLLIElement>
     [key: string]: any
-}): HTMLUListElement |
-    HTMLOListElement {
+}): HTMLUListElement | HTMLOListElement {
     let list: HTMLUListElement | HTMLOListElement | null = null
     if (ordered === true) {
         list = document.createElement('ol')
-    }
-    else {
+    } else {
         list = document.createElement('ul')
     }
-    for (let child of children) {
+    for (const child of children) {
         list.appendChild(child)
     }
-    for (let key in props) {
+    for (const key in props) {
         if (key.startsWith('on')) {
             list.addEventListener(key, props[key])
-        }
-        else {
+        } else {
             list.setAttribute(key, props[key])
         }
     }

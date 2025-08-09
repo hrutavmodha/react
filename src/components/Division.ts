@@ -9,14 +9,13 @@ export default function Division({
     if (!Array.isArray(children)) {
         children = [children]
     }
-    for (let child of children) {
+    for (const child of children) {
         div.appendChild(child)
     }
-    for (let key in props) {
+    for (const key in props) {
         if (key.startsWith('on')) {
             div.addEventListener(key.substring(2), props[key])
-        }
-        else {
+        } else {
             div.setAttribute(key, props[key])
         }
     }
